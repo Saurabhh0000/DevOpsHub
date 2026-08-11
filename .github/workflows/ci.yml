@@ -1,0 +1,26 @@
+name: DevOpsHub CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  first-ci-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Display project information
+        run: |
+          echo "CI Pipeline Started"
+          echo "Repository: DevOpsHub"
+          echo "Branch: main"
+          echo "CI Pipeline is running successfully"
+
+      - name: Verify README
+        run: |
+          test -f README.md
+          echo "README.md exists"
