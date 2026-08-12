@@ -14,7 +14,7 @@ class BackendApplicationTests {
 
 	@Test
 	void intentionalFailure() {
-		assertEquals(1, 1);
+		assertEquals(1, 7);
 	}
 
 }
